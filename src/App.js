@@ -1,23 +1,51 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+
+import { ColorPicker } from "./lib";
 
 function App() {
+  const onChange = (attrs, name) => {
+    console.log(attrs, name);
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div style={{ display: "flex", textAlign: "center" }}>
+      <div style={{ marginRight: "50px" }}>
+        <p>Soliddddd</p>
+        <ColorPicker
+          onStartChange={(color) => onChange(color, "start")}
+          onChange={(color) => onChange(color, "change")}
+          onEndChange={(color) => onChange(color, "end")}
+        />
+        <ColorPicker
+          onStartChange={(color) => onChange(color, "start")}
+          onChange={(color) => onChange(color, "change")}
+          onEndChange={(color) => onChange(color, "end")}
+        />
+        <ColorPicker
+          onStartChange={(color) => onChange(color, "start")}
+          onChange={(color) => onChange(color, "change")}
+          onEndChange={(color) => onChange(color, "end")}
+        />
+        <ColorPicker
+          onStartChange={(color) => onChange(color, "start")}
+          onChange={(color) => onChange(color, "change")}
+          onEndChange={(color) => onChange(color, "end")}
+        />
+        <ColorPicker
+          onStartChange={(color) => onChange(color, "start")}
+          onChange={(color) => onChange(color, "change")}
+          onEndChange={(color) => onChange(color, "end")}
+        />
+      </div>
+      <div>
+        <p>Gradient</p>
+        <ColorPicker
+          onStartChange={(color) => onChange(color, "start")}
+          onChange={(color) => onChange(color, "change")}
+          onEndChange={(color) => onChange(color, "end")}
+          isGradient
+        />
+      </div>
     </div>
   );
 }
